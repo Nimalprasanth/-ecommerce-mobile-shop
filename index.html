@@ -1,0 +1,1149 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+<link   href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+rel="stylesheet"
+/>
+<link
+rel="stylesheet"   href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
+/>
+<link
+rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+/>
+<title>Ecommerce Website</title>
+</head>
+<style>
+  
+html{
+    overflow-x: hidden;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Spartan', sans-serif;
+}
+section{
+    padding: 100px 0;
+}
+
+@media only screen and (max-width: 768px){
+    section{
+        padding: 50px 0;
+    }
+}
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+h4{
+    font-size: 20px;
+    color: #222;
+}
+h6{
+    font-weight: 700;
+    font-size: 12px;
+}
+p{
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+.section-p1{
+    padding: 40px 80px;
+}
+.section-m1{
+    margin: 40px 0;
+}
+button.normal{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 15px;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s;
+}
+button.normal:hover{
+    background: #9dcdcf;
+    border: #9dcdcf;
+}
+button.white{
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 20px;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid #fff;
+    outline: none;
+    transition: 0.2s;
+}
+body{
+    width: 100%;
+}
+.logo{
+    object-fit: contain;
+    filter: contrast(10);
+}
+
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 80px;
+    background: #7ca7aa;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#navbar li{
+    display: inline-block;
+    margin: 0 1rem;
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+#navbar li a{
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+} 
+#navbar li a:hover,
+#navbar li a.active{
+    color: #963541;
+}
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: #963541;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+#mobile{
+    display: none;
+    align-items: center;
+}
+#close{
+    display: none;
+}
+
+#hero{
+    background-image: url(assets/img/main3.avif);
+    height: 120vh;
+    min-height: 500px;
+    width: 100%;
+    background-size: cover;
+    background-position: top right 50%;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+#hero h4,
+#hero h2,
+#hero h1,
+#hero p{
+    color: #080808;
+    padding-bottom: 15px;
+}
+#hero h1{
+    color: #0b0b0b;
+}
+#hero button{
+    background-image: url(https://i.postimg.cc/50ZjH2D1/crudo.jpg);
+    background-position: center;
+    background-color: transparent;
+    width: max-content;
+    height: max-content;
+    color: #ffe9b8;
+    border: 0;
+    padding: 14px 80px 14px 80px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+}
+#feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: rgba(225, 164, 197, 0.804);
+}
+#feature .fe-box{
+    width: 180px;
+    text-align: center;
+    padding: 15px 15px;
+    border: 1px solid #9dcdcf;
+    margin: 15px 0;
+    cursor: pointer;
+}
+#feature .fe-box img{
+    width: 50%;
+    margin-bottom: 10px;
+}
+#feature .fe-box h6{
+    font-size: 1rem;
+    display: block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: #963541;
+    background-color: #9dcdcf;
+    transition: 0.2s ease;
+}
+.icon{
+    margin-bottom: 10px;
+}
+#feature .fe-box:hover{
+    background-color: #fff2e5;
+}
+#product1{
+    text-align: center;
+    background-color: rgb(176, 216, 234);
+}
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+#product1 .pro{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #9dcdcf;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+#product1 .pro:hover{
+    background-color: #fff2e5;
+}
+#product1 .pro img{
+    object-fit: cover;
+    width: 100%;
+    height: 325px;
+    border-radius: 20px;
+}
+#product1 .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+#product1 .pro .des span{
+    color: #606063;
+    font-size: 12px;
+}
+#product1 .pro .des h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+#product1 .pro .des i{
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+}
+#product1 .pro .des h4{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #963541; 
+}
+#product1 .pro .cart{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #9dcdcf;
+    font-weight: 500;
+    color: #963541;
+    border: 1px solid #9dcdcf;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+#banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(assets/img/main6.avif);
+    width: 100%;
+    height: 40vh;
+    min-height: 290px;
+    background-size: cover;
+    background-position: top;
+}
+#banner h4{
+    color: #090909;
+    font-size: 16px;
+}
+#banner h2{
+    color: #060606;
+    font-size: 30px;
+    padding: 10px 0;
+}
+#banner h2 span{
+    color: #9dcdcf;
+}
+#product1 .new img{
+    height: 150px;
+}
+
+#sm-banner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#sm-banner .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: flex-start;
+    background-image: url(assets/img/main5.avif);
+    min-width: 580px;
+    min-height: 290px;
+    height: 50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 30px;
+}
+#sm-banner .banner-box2{
+  background-image: url(assets/img/main4.avif);
+ 
+
+}
+#sm-banner h4{
+    color: #070707;
+    font-size: 20px;
+    font-weight: 300;
+}
+#sm-banner h2{
+    color: #040404;
+    font-size: 28px;
+    font-weight: 800;
+}
+#sm-banner span{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+#sm-banner .banner-box:hover button{
+    background-color: #963541;
+    border: 1px solid #963541;
+}
+
+#newsletter{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #161514;
+    background-position: top center;
+}
+
+#newsletter h4{
+    font-size: 22px;
+    font-weight: 700;
+    color: #5d5757;
+}
+#newsletter p{
+    font-size: 14px;
+    font-weight: 600;
+    color: #818ea0;
+}
+#newsletter p span{
+    color: #ffbd27;
+}
+#newsletter .form{
+    display: flex; 
+    flex: 1;
+}
+#newsletter .newstext{
+    flex: 1;
+}
+#newsletter input{
+    width: 65%;
+    font-size: 14px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    text-align: center;
+}
+#newsletter button{
+    width: 35%;
+    background-color: #9dcdcf;
+    color: #090808;
+    white-space: nowrap;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: url(assets/img/main9.avif);
+    width: 100%;
+    height: 40vh;
+    min-height: 290px;
+    background-size: cover;
+    background-position: top;
+}
+footer .col{
+    display: flex;
+    flex-direction: column;
+ 
+    margin-bottom: 20px;
+}
+footer .logo{
+    margin-bottom: 30px;
+}
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+footer a{
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+footer .follow{
+    margin-top: 20px;
+}
+footer .follow i{
+    color: #465b52;
+    padding-right: 4px;
+    cursor: pointer;
+}
+footer .install .row{
+    display: flex;
+    gap: 8px;
+}
+footer .install .row img{
+    padding: 4px;
+    border: 1px solid #9dcdcf;
+    max-width: 80px;
+    max-height: 46px;
+    border-radius: 6px;
+}
+footer .install img{
+    margin: 10px 0 15px 0;
+}
+footer .follow i:hover{
+    color: #963541;
+}
+footer  .follow i:hover,
+footer a:hover{
+    color: #963541;
+}
+footer .copyright{
+    width: 100%;
+    text-align: center;
+}
+
+@media only screen and (min-width: 799px){
+    #banner{
+        height: 30vh;
+    }
+    #feature{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #feature .fe-box{
+        justify-self: center;
+    }
+    #product1 .pro-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #product1 .pro-container .pro{
+        justify-self: center;
+    }
+    #sm-banner{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    #sm-banner .banner-box{
+        margin-bottom: 30px;
+    }
+    #banner3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+@media only screen and (max-width: 799px){
+    .section-p1{
+        padding: 40px 40px;
+    }
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #9dcdcf;
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+    #navbar.active{
+        right: 0px;
+    }
+    #navbar li{
+        margin-bottom: 25px;
+    }
+    #mobile{
+        display: flex;
+        align-items: center;
+    }
+    #mobile i{
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+        cursor: pointer;
+    }
+    #close{
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+    }
+    #lg-bag i{
+        display: none;
+    }
+    #hero {
+        height: 70vh;
+        padding: 0 80px;
+        background-position: top right;
+    }
+    #feature {
+        justify-content: center;
+    }
+    #feature .fe-box {
+        margin: 15px 15px;
+    }
+    #product1 .pro-container{
+        justify-content: center;
+    }
+    #product1 .pro{
+        margin: 15px;
+    }
+    #banner{
+        height: 20vh;
+    }
+    #sm-banner .banner-box{
+        min-width: 100%;
+        height: 40vh;
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+    #banner3{
+        padding: 0 40px;
+    }
+    #banner3 .banner-box{
+        width: 28%;
+    }
+    #banner3 .banner-box h2{
+        line-height: 1.2em;
+    }
+    #newsletter{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+    .section-p1{
+        padding: 20px;
+         
+    }
+    #header{
+        padding: 10px 30px;
+    }
+    h2{
+        font-size: 32px;
+    }
+    h1{
+        font-size: 38;
+    }
+    #hero{
+        align-items: center;
+        text-align: center;
+        padding: 0 20px;
+        background-position: top center;
+    }
+    #hero h4, 
+    #hero h2, 
+    #hero h1, 
+    #hero p {
+        padding-bottom: 7px;
+    }
+    #feature .fe-box{
+       border: transparent;
+        width: 50%;
+        padding: 5px;
+        margin: 0 0 15px 0;
+    }
+   
+    #banner{
+        height: 30vh;
+    }
+    #sm-banner .banner-box{
+        height: 30vh;
+    }
+    #sm-banner .banner-box h2{
+       line-height: 1.2em;
+    }
+    #sm-banner .banner-box2{
+        margin-top: 20px;
+    }
+    #banner h2{
+        font-size: 1.8rem;
+    }
+    #banner3{
+        padding: 0 20px;
+    }
+    
+    #newsletter{
+        padding: 40px 20px;
+    }
+    #newsletter span{
+       display: inline-block;
+    }
+    #newsletter .form{
+        justify-content: center;
+    }
+   .normal{
+      background-color: #8dceb2;
+      margin-right: 0px;
+}
+
+  
+  </style>
+<body>
+  
+<section id="header">
+  <h3> Z Mobile Shop</h3>
+  <div>
+    <ul id="navbar">
+      <li><a class="active" href="index.html">Home</a></li>
+      <li><a href="https://www.homecentre.in/in/en/?utm_source=bing&utm_medium=cpc&utm_campaign=AO_HC%20DTO_Furniture_Bing_AlwaysOn_Search_Sales_13072023_N/A_Generic%20Furniture_N/A_NU+RM_India&msclkid=c3b0adf50fa715bd5a75cb843c09f52e">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li id="lg-bag"><a href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
+      <a href="#" id="close"><i class="fas fa-times"></i></a>
+    </ul>
+  </div>
+  <div id="mobile">
+    <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
+    <i id="bar" class="fas fa-outdent"></i>
+  </div>
+</section>
+<section id="hero">
+  <h4>Trade-in-offer</h4>
+  <h2>Super value deals</h2>
+  <h1>On all Mobile phones</h1>
+  <p>Save more with coupons & up to 70% off!</p>
+  <button>Shop Now</button>
+</section>
+<section id="feature" class="section-p1">
+  <div class="fe-box">
+    <img class="icon" src="https://i.postimg.cc/Yqjdg1bM/shipping.jpg" alt="shipping" />
+    <h6>Free Shipping</h6>
+  </div>
+  <div class="fe-box">
+    <img class="icon" src="https://i.postimg.cc/Y01Z1dD0/order.jpg" alt="order" />
+    <h6>Online Order</h6>
+  </div>
+  <div class="fe-box">
+    <img class="icon" src="https://i.postimg.cc/k5BHjJYk/money.jpg" alt="money" />
+    <h6>Save Money</h6>
+  </div>
+  <div class="fe-box">
+    <img class="icon" src="https://i.postimg.cc/mkwVLJ6Y/promotion.jpg" alt="promotions" />
+    <h6>Promotions</h6>
+  </div>
+  <div class="fe-box">
+    <img class="icon" src="https://i.postimg.cc/2jwxZp2v/sell.jpg" alt="sell" />
+    <h6>Happy Sell</h6>
+  </div>
+  <div class="fe-box">
+    <img class="icon" src="https://i.postimg.cc/GpFDnYfY/support.jpg" alt="support" />
+    <h6>F24/7 Support</h6>
+  </div>
+</section>
+<section id="product1" class="section-p1">
+  <h2>Featured Products</h2><br><br>
+  
+  <div class="pro-container">
+    <div class="pro">
+      <img src="assets/img/1.jpeg" alt="look1" />
+      <div class="des">
+        <span>Modern Mobiles</span>
+        <h5>Look 1</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>$780</h4>
+      </div>
+      <a href="#"
+        ><span class="material-symbols-outlined cart">
+          shopping_cart
+        </span></a
+      >
+    </div>
+    <div class="pro">
+      <img src="assets/img/2.jpeg" alt="look2" />
+      <div class="des">
+        <span>Modern Mobile</span>
+        <h5>Look 2</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>$780</h4>
+      </div>
+      <a href="#"
+        ><span class="material-symbols-outlined cart">
+          shopping_cart
+        </span></a
+      >
+    </div>
+    <div class="pro">
+      <img src="assets/img/3.jpeg" />
+      <div class="des">
+        <span>Modern Mobile</span>
+        <h5>Look 3</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>$780</h4>
+      </div>
+      <a href="#"
+        ><span class="material-symbols-outlined cart">
+          shopping_cart
+        </span></a
+      >
+    </div>
+    <div class="pro">
+      <img src="assets/img/4.jpeg" alt="look4" />
+      <div class="des">
+        <span>Modern Mobile</span>
+        <h5>Look 4</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>$780</h4>
+      </div>
+      <a href="#"
+        ><span class="material-symbols-outlined cart">
+          shopping_cart
+        </span></a
+      >
+    </div>
+    <div class="pro">
+      <img src="assets/img/5.jpeg" alt="look5" />
+      <div class="des">
+        <span>Modern Mobile</span>
+        <h5>Look 5</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>$780</h4>
+      </div>
+      <a href="#"
+        ><span class="material-symbols-outlined cart">
+          shopping_cart
+        </span></a
+      >
+    </div>
+    <div class="pro">
+      <img src="assets/img/6.jpeg" alt="look6" />
+      <div class="des">
+        <span>Modern Mobile</span>
+        <h5>Look 6</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>$780</h4>
+      </div>
+      <a href="#"
+        ><span class="material-symbols-outlined cart">
+          shopping_cart
+        </span></a
+      >
+    </div>
+    <div class="pro">
+      <img src="assets/img/7.jpeg" alt="look7" />
+      <div class="des">
+        <span>Modern Mobile</span>
+        <h5>Look 7</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>$780</h4>
+      </div>
+      <a href="#"
+        ><span class="material-symbols-outlined cart">
+          shopping_cart
+        </span></a
+      >
+    </div>
+    <div class="pro">
+      <img src="assets/img/8.jpeg" alt="look8" />
+      <div class="des">
+        <span>Modern Mobile</span>
+        <h5>Look 8</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>$780</h4>
+      </div>
+      <a href="#"
+        ><span class="material-symbols-outlined cart">
+          shopping_cart
+        </span></a
+      >
+    </div>
+  </div>
+</section>
+
+<section id="banner" class="section-m1">
+  <h4>Repair Services</h4>
+  <h2>Up to <span>70% Off</span> - Mobiles</h2>
+  <button class="normal">Explore More</button>
+</section>
+
+<section id="product1" class="section-p1">
+  <h2>New Designed Mobiles</h2>
+
+  <div class="pro-container">
+    <div class="pro new">
+      <img src="assets/img/9.jpeg" alt="look1" />
+      <div class="des">
+        <span>Modern Mobiles</span>
+        <h5>Look 9</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>$780</h4>
+      </div>
+      <a href="#"
+        ><span class="material-symbols-outlined cart">
+          shopping_cart
+        </span></a
+      >
+    </div>
+    <div class="pro new">
+      <img src="assets/img/10.jpeg" alt="look2" />
+      <div class="des">
+           <span>Modern Mobiles</span>
+        <h5>Look 10</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>$780</h4>
+      </div>
+      <a href="#"
+        ><span class="material-symbols-outlined cart">
+          shopping_cart
+        </span></a>
+    </div>
+    <div class="pro new">
+      <img src="assets/img/11.jpeg" alt="look3" />
+      <div class="des">
+        <span>Modern Mobiles</span>
+        <h5>Look 11</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>$780</h4>
+      </div>
+      <a href="#"
+        ><span class="material-symbols-outlined cart">
+          shopping_cart
+        </span></a
+      >
+    </div>
+    <div class="pro new">
+      <img src="assets/img/12.jpeg" alt="look4" />
+      <div class="des">
+        <span>Modern Mobiles</span>
+        <h5>Look 12</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>$780</h4>
+      </div>
+      <a href="#"
+        ><span class="material-symbols-outlined cart">
+          shopping_cart
+        </span></a
+      >
+    </div>
+    <div class="pro new">
+      <img src="assets/img/13.jpeg" alt="look5" />
+      <div class="des">
+        <span>Modern Mobiles</span>
+        <h5>Look 13</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>$780</h4>
+      </div>
+      <a href="#"
+        ><span class="material-symbols-outlined cart">
+          shopping_cart
+        </span></a
+      >
+    </div>
+    <div class="pro new">
+      <img src="assets/img/14.jpeg" alt="look6" />
+      <div class="des">
+        <span>Modern Mobiles</span>
+        <h5>Look 14</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>$780</h4>
+      </div>
+      <a href="#"
+        ><span class="material-symbols-outlined cart">
+          shopping_cart
+        </span></a
+      >
+    </div>
+    <div class="pro new">
+      <img src="assets/img/15.jpeg" alt="look7" />
+      <div class="des">
+        <span>Modern Mobiles</span>
+        <h5>Look 15</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>$780</h4>
+      </div>
+      <a href="#"
+        ><span class="material-symbols-outlined cart">
+          shopping_cart
+        </span></a
+      >
+    </div>
+    <div class="pro new">
+      <img src="assets/img/16.jpeg" alt="look8" />
+      <div class="des">
+        <span>Modern Mobiles</span>
+        <h5>Look 16</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>$780</h4>
+      </div>
+      <a href="#"
+        ><span class="material-symbols-outlined cart">
+          shopping_cart
+        </span></a
+      >
+    </div>
+  </div>
+</section>
+<section id="sm-banner" class="section-p1">
+  <div class="banner-box">
+    <h4>Crazy Deals</h4>
+    <h2>Buy 1 Mobile get free coopans</h2>
+    <span>The best classic Mobiles is on sale at Z Mobiles</span>
+    <button class="white">Learn More</button>
+  </div>
+  <div class="banner-box banner-box2">
+    <h2>Upcoming Season</h2>
+    <span>The best classic Mobiles is on sale at Z Mobiless</span>
+    <button class="white">Models</button>
+  </div>
+</section>
+
+
+
+<section id="newsletter" class="section-p1 section-m1">
+  <div class="newstext">
+    <h4>Sign Up For Newsletters</h4>
+    <p>
+      Get E-mail updates about our latest shop and
+      <span> special offers</span>
+    </p>
+  </div>
+  <div class="form">
+    <input type="text" placeholder="Your email address" />
+    <button class="normal">Sign Up</button>
+  </div>
+</section>
+
+ 
+
+<footer class="section-p1">
+  <div class="col">
+    <h2>Z Mobiles Shop</h2>
+    <h4>Contact</h4>
+    <p><strong>Address:</strong> 29, Place sathyamangalam, Erode</p>
+    <p><strong>Phone:</strong> 866 812 0763</p>
+    <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+    <div class="follow">
+      <h4>Follow us</h4>
+      <div class="icon">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-pinterest"></i>
+        <i class="fa-brands fa-youtube"></i>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <h4>About</h4>
+    <a href="#">About us</a>
+    <a href="#">Delivery Information</a>
+    <a href="#">Primacy Policy</a>
+    <a href="#">Terms & Conditions</a>
+    <a href="#">Contact Us</a>
+  </div>
+  <div class="col">
+    <h4>My Acoount</h4>
+    <a href="#">Sign in</a>
+    <a href="#">View Cart</a>
+    <a href="#">My Wishlist</a>
+    <a href="#">Track My Order</a>
+    <a href="#">Help</a>
+  </div>
+
+</footer>
+
+
+</body>
+</html>
